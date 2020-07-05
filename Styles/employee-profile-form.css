@@ -1,0 +1,271 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: lightcyan;
+  max-width: 100%;
+}
+header{
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+  display: flex;
+}
+
+div > a> img{
+  float: left;
+  height: 80px;
+  width: 100px;
+  padding: 8px;
+}
+.company-name > .company-name-label{
+  text-align: center;
+}
+.company-name{
+  width:100%;
+  text-align: center;
+}
+
+footer{
+  position:relative;
+  width:100%;
+  height: 40px;
+  background:#505050;
+  bottom: 0;
+}
+.copyright p{
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+}
+.container {
+  border-radius: 5px;
+  padding: 20px;
+  width: 60%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.31);
+}
+
+input[type=text],input[type=password],input[type=number],input[type=date],textarea,select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  resize: none;
+  box-shadow: 10px 5px 5px grey;
+}
+
+.info-heading{
+  width:100%;
+  background-color: aqua;
+  text-align: center;
+}
+
+.register,.reset{
+  background-color:aqua;
+  color: white;
+  padding: 12px 10px;
+  border: none;
+  border-radius: 4px;
+  width: 30%;
+  align-content: center;
+}
+
+.reset:hover,.register:hover {
+  background-color:crimson;
+}
+
+label {
+  padding: 12px 12px 12px 12px;
+  display: inline-block;
+  color:ghostwhite
+}
+.col-left {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-right {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.error {
+  color: red;
+  text-align: justify;
+}
+.register-reset-button{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.phone-number-input,.address-input{
+  position: relative;
+  width:75%;
+  float:right;
+}
+/* .add-phone-button,.remove-phone-button{
+  position: absolute;
+  right:11px;
+  top:7px;
+} */
+.remove-btn{
+  width:100%;
+  float:right;
+}
+.add-address-button,.add-phone-button,.remove-phone-button,.remove-address-button{
+  float: right;
+  margin-right: 0px;
+  margin-top: 5px;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  outline: 0;
+}
+.add-address-button,.add-phone-button{
+  background-color: green;
+}
+
+.remove-phone-button,.remove-address-button{
+  background-color: red;
+}
+#answer{
+  width:auto;
+}
+.captcha-refresh-button{
+  font-size:45px;
+  color:lightseagreen;
+  height:50px;
+  width:42px;
+}
+.mandatory{
+  padding: 5px;
+  color: red;
+  font-size: larger;
+}
+.captchaError,.profilePhotoError{
+  text-align: center;
+}
+
+#imageInputFile {
+  position: absolute;
+  top: -1000px;
+}
+#profileImageHolder{
+  height: 250px;
+}
+#profileImage {
+  border-radius: 9%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  margin-bottom: -80px;
+  cursor: pointer;
+  background: #f4f4f4;
+  display: table;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 5px 8px rgba(black, 0.35);
+}
+#employeeProfileImage{
+  border-radius: 9%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  position: absolute;
+  top: 0px;
+  right:0px;
+  margin-bottom: -80px;
+  cursor: pointer;
+  background: #f4f4f4;
+  display: table;
+  background-size: cover;
+  background-position: center center;
+  box-shadow: 0 5px 8px rgba(black, 0.35);
+}
+#profileImage .drag-drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9%;
+  width: 100%;
+  height: 100%;
+  border: 4px dashed #ddd;
+  opacity: 1;
+}
+#profileImage label {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0 30px;
+  color: grey;
+  opacity: 1;
+}
+#profileImage.dragging {
+  background-image: none;
+}
+#profileImage.dragging .drag-drop {
+  animation-duration: 10s;
+  animation-name: spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  opacity: 1;
+}
+#profileImage.dragging label {
+  opacity: 0.5;
+}
+#profileImage.hasImage .drag-drop, #profileImage.hasImage label {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+.image-container{
+  position: relative;
+}
+
+#captcha-answer{
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .col-left, .col-right,.container, .register, .reset,.phone-number-input {
+    width: 100%;
+    margin-top: 0;
+  }
+  .register{
+    margin-bottom: 9px;
+  }
+}
+
+@media screen and (max-width: 333px) {
+  div > img {
+    display: none;
+  } 
+  
+  .company-name > label > h2 {
+    width:100%;
+    text-align: center;
+  }
+}
+
